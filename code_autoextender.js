@@ -18,7 +18,7 @@ let s = await Deno.readTextFile(s_path_file_in_abs);
 
 let o_code_autoextended = f_o_code_autoextended__from_s(s);
 
-
+console.log(o_code_autoextended)
 for(let o_rs_file of o_code_autoextended.a_o_rs_file){
     let s_path = `${s_path_folder_file_in}${o_rs_file.s_path_file}`
 
