@@ -30,8 +30,10 @@ for(let o_rs_file of o_code_autoextended.a_o_rs_file){
 
 let s_path_folder_in_abs = s_path_file_in_abs.split('/').slice(0,-1).join('/');
 let s_name_file_in = s_path_file_in_abs.split('/').pop();
+let s_path_out = `${s_path_folder_in_abs}/${s_name_file_in?.split('.').slice(0,-1)}_autoextended.${s_name_file_in?.split('.').pop()}`
+console.log(s_path_out)
 await Deno.writeTextFile(
-    `${s_path_folder_in_abs}/${s_name_file_in?.split('.').slice(0,-1)}_autoextended.${s_name_file_in?.split('.').pop()}`,
+    s_path_out,
     o_code_autoextended?.s_autoextended
 );
 // console.log(s_rs_new)
